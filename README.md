@@ -12,7 +12,9 @@ Somente o site estático, documentação pública e, futuramente, pacotes de dis
 
 ## Publicação da página
 
-GitHub Pages publica a raiz da branch `main`. A página usa HTML e CSS locais, sem dependências, scripts, analytics ou arquivos do jogo.
+GitHub Pages publica a raiz da branch `main`. A página usa HTML, CSS e JavaScript locais, sem dependências externas, analytics ou arquivos do jogo.
+
+Idiomas: inglês, português, espanhol, chinês simplificado e japonês, os mesmos do overlay. O seletor salva a preferência localmente quando permitido; no primeiro acesso usamos o idioma compatível do navegador, com fallback para inglês. Sem JavaScript, o conteúdo inicial continua legível em português.
 
 ## Checklist antes da primeira release
 
