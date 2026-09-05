@@ -1,0 +1,9 @@
+*.zip
+*.exe
+*.dll
+*.log
+*.map
+.env
+.env.*
+node_modules/
+dist/
