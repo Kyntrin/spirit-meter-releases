@@ -89,6 +89,7 @@ function applyLanguage(language) {
   document.querySelector(".features").setAttribute("aria-label", copy.features);
   fields.forEach((selector, index) => { document.querySelector(selector).textContent = copy.text[index]; });
   document.querySelector("#language").value = code;
+  if (typeof renderGallery === "function") renderGallery(code);
 }
 
 let savedLanguage;

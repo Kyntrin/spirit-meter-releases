@@ -7,6 +7,8 @@
   <meta name="color-scheme" content="dark">
   <title>Spirit Meter · Downloads</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="gallery.js" defer></script>
   <script src="site.js" defer></script>
 </head>
 <body>
@@ -30,6 +32,52 @@
         <article><span class="number">01 / COMBATE</span><h2>Cada encontro conta.</h2><p>DPS, cura e histórico de combate para olhar além do número final.</p></article>
         <article><span class="number">02 / EFEITOS</span><h2>O que importa, à vista.</h2><p>Painéis de buffs, auras e debuffs com filtros e posicionamento independente.</p></article>
         <article><span class="number">03 / FARM</span><h2>Seu progresso, claro.</h2><p>Acompanhe experiência, ouro e itens adquiridos durante sua sessão.</p></article>
+      </section>
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Conheça o overlay</h2>
+        <p id="gallery-intro">Interface real, dados de demonstração. Classes substituem os nicks. As imagens estão em inglês; as explicações acompanham seu idioma.</p>
+        <div class="gallery-grid">
+          <article class="snapshot-card" id="feature-dps">
+            <div class="snapshot-copy"><span class="number">01</span><h3>Dano em tempo real</h3><p class="feature-description">Acompanhe seu DPS ou o da party, o dano total e a contribuição das skills, com ícones de classe para facilitar a leitura.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/dps.png"><div class="snapshot-stage"><img src="assets/screenshots/dps.png" width="840" height="1240" loading="lazy" decoding="async" alt="Captura de demonstração: Dano em tempo real"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-healing">
+            <div class="snapshot-copy"><span class="number">02</span><h3>Visão de cura</h3><p class="feature-description">Veja HPS, cura total e as skills responsáveis por cada contribuição. Cura efetiva e overheal são separados nas análises do histórico quando confirmados.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/healing.png"><div class="snapshot-stage"><img src="assets/screenshots/healing.png" width="840" height="1040" loading="lazy" decoding="async" alt="Captura de demonstração: Visão de cura"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-effects">
+            <div class="snapshot-copy"><span class="number">03</span><h3>Buffs e auras</h3><p class="feature-description">Mantenha efeitos ativos, duração restante e stacks à vista. Escolha o que aparece e organize os painéis ao redor da sua área de jogo.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/effects.png"><div class="snapshot-stage"><img src="assets/screenshots/effects.png" width="2200" height="528" loading="lazy" decoding="async" alt="Captura de demonstração: Buffs e auras"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-controls">
+            <div class="snapshot-copy"><span class="number">04</span><h3>Controles da sessão</h3><p class="feature-description">Confira o estado da captura e acesse ações comuns: resetar combate, mostrar ou ocultar painéis e abrir os ajustes de HUD e efeitos.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/controls.png"><div class="snapshot-stage"><img src="assets/screenshots/controls.png" width="2080" height="1800" loading="lazy" decoding="async" alt="Captura de demonstração: Controles da sessão"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-history">
+            <div class="snapshot-copy"><span class="number">05</span><h3>Histórico de combate</h3><p class="feature-description">Revisite encontros salvos com detalhes por skill, dano bruto e efetivo, overkill e cobertura confirmada. Valores não confirmados ficam identificados.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/history.png"><div class="snapshot-stage"><img src="assets/screenshots/history.png" width="2080" height="1800" loading="lazy" decoding="async" alt="Captura de demonstração: Histórico de combate"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-farm">
+            <div class="snapshot-copy"><span class="number">06</span><h3>Farm tracker</h3><p class="feature-description">Acompanhe XP e job XP por hora, ouro ganho e gasto, saldo e itens adquiridos. Filtre itens por tipo e escolha quantos exibir.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/farm.png"><div class="snapshot-stage"><img src="assets/screenshots/farm.png" width="840" height="920" loading="lazy" decoding="async" alt="Captura de demonstração: Farm tracker"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-casts">
+            <div class="snapshot-copy"><span class="number">07</span><h3>Casts inimigos</h3><p class="feature-description">Veja os tempos dos casts inimigos detectados e os alvos, quando disponíveis. Escolha apenas bosses ou todos os inimigos detectados; algumas skills não têm alvo direto.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/casts.png"><div class="snapshot-stage"><img src="assets/screenshots/casts.png" width="960" height="380" loading="lazy" decoding="async" alt="Captura de demonstração: Casts inimigos"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-debuffs">
+            <div class="snapshot-copy"><span class="number">08</span><h3>Painel de debuffs</h3><p class="feature-description">Dê aos efeitos negativos um espaço próprio, com duração restante e stacks. Mova e configure este painel separadamente dos buffs e auras.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/debuffs.png"><div class="snapshot-stage"><img src="assets/screenshots/debuffs.png" width="960" height="260" loading="lazy" decoding="async" alt="Captura de demonstração: Painel de debuffs"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-selection">
+            <div class="snapshot-copy"><span class="number">09</span><h3>Seletor de efeitos</h3><p class="feature-description">Busque efeitos e filtre por classe ou categoria. Use cards ou tabela para escolher o que aparece; efeitos ocultos continuam sendo registrados no histórico.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/selection.png"><div class="snapshot-stage"><img src="assets/screenshots/selection.png" width="2080" height="1800" loading="lazy" decoding="async" alt="Captura de demonstração: Seletor de efeitos"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+          <article class="snapshot-card" id="feature-uptime">
+            <div class="snapshot-copy"><span class="number">10</span><h3>Uptime de efeitos</h3><p class="feature-description">Revise por quanto tempo seus buffs e auras ficaram ativos no encontro salvo, incluindo aplicações, renovações e stacks máximos.</p></div>
+            <a class="snapshot-link" href="assets/screenshots/uptime.png"><div class="snapshot-stage"><img src="assets/screenshots/uptime.png" width="2080" height="1800" loading="lazy" decoding="async" alt="Captura de demonstração: Uptime de efeitos"></div><span class="expand-label">Abrir imagem em tamanho completo</span></a>
+          </article>
+        </div>
       </section>
       <aside class="notice"><h2>Um projeto em evolução</h2><p>Os recursos ainda estão em testes e podem mudar. Este espaço reúne a página de distribuição e, futuramente, os pacotes e notas de versão — não o código-fonte do aplicativo.</p></aside>
     </main>

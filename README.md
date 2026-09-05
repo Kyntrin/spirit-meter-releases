@@ -1,28 +1,63 @@
-# Spirit Meter — distribuição
+# Spirit Meter
 
-Página pública de distribuição do Spirit Meter, um overlay independente para SpiritVale.
+A companion overlay for SpiritVale: combat meters, active effects, enemy cast alerts, local encounter history, and farming statistics.
 
-**Status:** em desenvolvimento. Nenhuma release ou download público disponível neste momento.
+**Status: alpha, under development. No public releases or downloads are available yet.**
 
-Site: https://kyntrin.github.io/spirit-meter-releases/
+**[Visit the website](https://kyntrin.github.io/spirit-meter-releases/) · [Explore the screenshots](https://kyntrin.github.io/spirit-meter-releases/#gallery)**
 
-## Escopo deste repositório
+## What lives here
 
-Somente o site estático, documentação pública e, futuramente, pacotes de distribuição e notas de versão. O desenvolvimento do aplicativo permanece em um repositório privado separado. Não copie seu histórico Git para cá.
+This repository contains the public website, documentation, and presentation screenshots. Future reviewed distribution packages and release notes will be published here as well.
 
-## Publicação da página
+The application's source code and development history remain in a separate private repository. There is no automatic synchronization from that repository.
 
-GitHub Pages publica a raiz da branch `main`. A página usa HTML, CSS e JavaScript locais, sem dependências externas, analytics ou arquivos do jogo.
+## Feature previews
 
-Idiomas: inglês, português, espanhol, chinês simplificado e japonês, os mesmos do overlay. O seletor salva a preferência localmente quando permitido; no primeiro acesso usamos o idioma compatível do navegador, com fallback para inglês. Sem JavaScript, o conteúdo inicial continua legível em português.
+- **Combat:** live DPS and HPS, class icons, and skill contributions for yourself or your party.
+- **Effects:** configurable buffs, auras, debuffs, and a searchable effect selector.
+- **Enemy casts:** detected cast timers and target information when available, with a boss-only option.
+- **Encounter history:** skill breakdowns, effective/excess metrics, confirmation coverage, and local buff/aura uptime.
+- **Farming:** XP, job XP, gold income and spending, and acquired items with type and display-count filters.
 
-## Checklist antes da primeira release
+The gallery uses high-resolution captures of the real interface with synthetic demonstration data. Class labels replace player nicknames, including cast targets and history entries. Screenshots are in English; descriptions and image labels are available in all five website languages. These are feature previews, not measurements from real player sessions or a guarantee of final release behavior.
 
-- Validar o pacote no Windows com os testers.
-- Revisar o conteúdo extraído do ZIP: não publicar fontes do backend, source maps, dumps, logs, credenciais, configurações pessoais ou arquivos de desenvolvimento.
-- Revisar permissões de redistribuição de dependências e assets.
-- Incluir instruções, requisitos e limitações conhecidas.
-- Gerar SHA-256 do pacote final e registrar nas notas de versão.
-- Publicar apenas os artefatos revisados em GitHub Releases e então habilitar os links de download na página.
+## Languages
 
-Não existe sincronização automática com o repositório privado. Publicar pacotes requer uma etapa explícita de revisão; manter o repositório privado não protege fontes incluídos dentro do ZIP.
+English, Portuguese, Spanish, Simplified Chinese, and Japanese, matching the overlay. The language selector remembers the visitor's preference locally when storage is available. Otherwise, the first supported browser language is used, with English as the fallback. Without JavaScript, the initial Portuguese content and screenshot links remain usable.
+
+## Website development
+
+GitHub Pages publishes the root of `main`. The site uses local HTML, CSS, and JavaScript with no external runtime dependencies or analytics. Screenshots load lazily and link to their full-size originals.
+
+Run the checks with [Bun](https://bun.sh/):
+
+```sh
+bun test
+```
+
+To preview locally, serve this directory with any static HTTP server.
+
+## Screenshot publication checklist
+
+- Generate screenshots from the application's presentation mode, never from a tester's live session.
+- Use generic class labels instead of nicknames in every panel, target, and history entry.
+- Render with an isolated configuration, a fixed virtual screen, and 2× scale.
+- Review every image for clipping, legibility, names, paths, and other personal information.
+- Copy only the reviewed PNG files to `assets/screenshots/`; keep the application and generator private.
+- Update all five caption catalogs in `gallery.js`, the no-JavaScript HTML, and the tests when adding a feature.
+
+## Before the first release
+
+- Validate the package on Windows with testers.
+- Inspect the extracted archive: do not publish application source files, source maps, dumps, logs, credentials, personal settings, or development files.
+- Review redistribution permissions for dependencies and assets.
+- Include requirements, installation instructions, and known limitations.
+- Generate a SHA-256 checksum for the final package and include it in the release notes.
+- Publish only reviewed artifacts through GitHub Releases, then enable the website's download links.
+
+A private development repository does not protect source files accidentally included inside a public package.
+
+## Disclaimer
+
+Spirit Meter is an independent project and is not officially affiliated with SpiritVale. Game names and artwork shown within interface previews belong to their respective owners. Publishing screenshots does not imply permission to redistribute standalone game assets.
