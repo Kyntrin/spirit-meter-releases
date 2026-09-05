@@ -38,6 +38,14 @@ bun test
 
 To preview locally, serve this directory with any static HTTP server.
 
+## Contribution safeguards
+
+Read `AGENTS.md` before making changes. Install the clone-local hooks with `git config --local core.hooksPath .githooks` after checking for existing custom hooks. Run `node scripts/verify-public.mjs --staged` and `bun test` before committing.
+
+Use a feature branch and pull request, with concise English conventional commit subjects. The publication guard checks approved file paths, destinations, common credential patterns, file types and screenshot metadata. The pre-push hook checks every outgoing commit tree, including intermediate commits that later deleted a file. Website CI runs the guard and tests before integration.
+
+These checks do not establish that arbitrary code is safe or that screenshot pixels contain no personal information. Human review remains required. Once data has been pushed to any public branch, CI cannot undo its disclosure. Never bypass a guard to publish unreviewed content.
+
 ## Screenshot publication checklist
 
 - Generate screenshots from the application's presentation mode, never from a tester's live session.
